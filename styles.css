@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -100;
+  }
+  
+  .body-particles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+body {
+    background-image: url('background.jpg');
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    /*font-family: Comic sans-serif, Comic serif, cursive;*/
+    background-size: cover;
+}
+
+.app-main {
+    width: 50vh;
+    margin: 50px auto;
+    background-color: rgba(226, 215, 222, 0.6);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(2, 1, 3, 0.9), 0 6px 20px 0 rgba(14, 4, 27, 0.9);
+}
+
+.app-main.dark {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.input-box.dark {
+    background-color: rgba(59, 55, 55, 0.6);
+    color: #e6e3e3;
+}
+.input-box.dark:focus {
+    background-color: #000000;
+}
+
+
+
+.app-main > * {
+    margin-bottom: 20px;
+    border-radius: 50%
+}
+
+
+.input-box {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    outline: none;
+    color: #000000;
+    font-size: 1.2rem;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 10px;
+    text-align: center;
+    
+}
+
+.input-box:focus {
+    background-color: rgba(255, 255, 255, 255);
+}
+
+.weather-body {
+    display: none;
+    color:  #4965a1;
+    padding:  20px;
+    line-height:  2rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+}
+.weather-body.dark {
+    background-color: rgba(59, 55, 55, 0.6);
+}
+
+.location-details {
+    font-weight:  bold;
+}
+
+.weather-status {
+    padding: 20px;
+}
+
+#icon {
+    font-size: 6rem;
+    animation: fas-anime 2s linear infinite alternate;
+    text-shadow: 2px 3px 40px rgb(41, 41, 33);
+}
+@keyframes fas-anime {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.temp {
+    color: rgb(224, 55, 55);
+    font-size: 50pt;
+    font-weight: 700;
+    margin: 20px 0;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.min-max, .weather {
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+
+.lable {
+    text-align: center;
+    height: 26px;
+    width: 50px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.4);
+}
+
+.ball {
+    width: 22px;
+    position: absolute;
+    top: 2px;
+    border-radius: 50%;
+    left: 2px;
+    background-color: rgb(87, 84, 84);
+    height: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .lable .ball {
+    transform: translateX(24px);
+}
+
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f1c40f;
+}
+
+@media (max-width: 450px) {
+    .app-main {
+        width: 85%;
+    }
+} 
+
+#search_btn {
+    float: right;
+    padding-top: 15px;
+    background-color: Transparent;
+    border: none;
+}
+#search_btn:active {
+    border-style: outset;
+    border: none;
+  }
+button:hover:disabled{
+    /*your styles*/
+}
+button {outline: none !important;}
